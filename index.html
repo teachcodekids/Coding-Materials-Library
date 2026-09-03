@@ -1,474 +1,375 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>กลุ่ม VIP TEACHCODE — 299 บาท</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>คลังสื่อการสอน TEACHCODE — สำหรับคุณครูและผู้ปกครอง</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#0f2f6b; --navy-2:#153f8c; --cyan:#29abe2; --cyan-l:#5ec6f0;
   --ink:#12294d; --muted:#5b7192; --line:#dce9f7; --bg:#f2f8fe; --white:#fff;
-  --shadow:0 10px 30px rgba(15,47,107,.10); --shadow-lg:0 20px 50px rgba(15,47,107,.18);
+  --shadow:0 10px 30px rgba(15,47,107,.10); --shadow-lg:0 24px 56px rgba(15,47,107,.20);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Noto Sans Thai','Kanit',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-h1,h2,h3,.num{font-family:'Kanit','Noto Sans Thai',sans-serif;line-height:1.25}
+body{font-family:'Noto Sans Thai','Kanit',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:'Kanit','Noto Sans Thai',sans-serif}
+a{color:inherit;text-decoration:none}
 
-/* ---------- top bar ---------- */
-.topbar{background:var(--navy);color:#dbeaff;font-size:14px;text-align:center;padding:9px 16px;letter-spacing:.2px}
-.topbar b{color:#ffd453}
+/* header */
+.header{background:linear-gradient(135deg,#0c1f4a 0%,var(--navy) 45%,var(--navy-2) 100%);color:#fff;padding:44px 0 130px;position:relative;overflow:hidden}
+.header::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 10% 15%, rgba(41,171,226,.35), transparent 40%),
+  radial-gradient(circle at 90% 10%, rgba(255,138,0,.18), transparent 40%),
+  radial-gradient(circle at 80% 85%, rgba(94,198,240,.25), transparent 45%);}
+.header::after{content:"";position:absolute;inset:0;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.14) 1px, transparent 1.4px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 75%)}
+.headwrap{position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;letter-spacing:.3px}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--cyan-l);box-shadow:0 0 12px var(--cyan-l)}
+.htext{position:relative;max-width:740px;margin-top:26px}
+.htext .kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);padding:7px 18px;border-radius:999px;font-size:13.5px;font-weight:600;margin-bottom:18px;backdrop-filter:blur(6px)}
+.htext h1{font-size:clamp(30px,4.4vw,46px);font-weight:800;line-height:1.28;margin-bottom:14px;letter-spacing:.2px}
+.htext h1 span{background:linear-gradient(90deg,var(--cyan-l),#9be4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.htext p{color:#cfe0f7;font-size:16.5px;max-width:600px}
+.hstats{position:relative;display:flex;gap:14px;margin-top:26px;flex-wrap:wrap}
+.hstat{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:14px 20px;min-width:128px;backdrop-filter:blur(6px);transition:.2s}
+.hstat:hover{background:rgba(255,255,255,.15);transform:translateY(-2px)}
+.hstat b{display:block;font-size:24px;font-weight:800;color:#fff}
+.hstat span{font-size:12.5px;color:#cfe0f7}
 
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;background:
-  radial-gradient(900px 500px at 12% -10%, #2a63c9 0%, transparent 60%),
-  radial-gradient(800px 500px at 95% 10%, #29abe2 0%, transparent 55%),
-  linear-gradient(160deg,#0d2a5c 0%,#123a7d 55%,#0f2f6b 100%);
-  color:#fff;padding:64px 0 76px}
-.hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:70px;
-  background:var(--white);clip-path:polygon(0 100%,100% 0,100% 100%)}
-.grid-bg{position:absolute;inset:0;opacity:.16;
-  background-image:linear-gradient(rgba(255,255,255,.25) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.25) 1px,transparent 1px);
-  background-size:52px 52px;mask-image:radial-gradient(70% 60% at 50% 30%,#000,transparent)}
-.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
-.brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.brand img{width:52px;height:52px;border-radius:14px;background:#fff;padding:5px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
-.brand span{font-family:'Kanit',sans-serif;font-weight:600;letter-spacing:3px;font-size:14px;color:#bcdcff}
-.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);
-  color:#eaf5ff;padding:7px 16px;border-radius:999px;font-size:14px;font-weight:600;backdrop-filter:blur(6px);margin-bottom:18px}
-.pill i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.25);animation:blink 1.6s infinite}
-@keyframes blink{50%{opacity:.35}}
-.hero h1{font-size:clamp(32px,5vw,52px);font-weight:700;margin-bottom:14px}
-.hero h1 em{font-style:normal;background:linear-gradient(90deg,#7ee0ff,#ffd453);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lede{font-size:17px;color:#cfe2ff;max-width:540px;margin-bottom:26px}
-.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
-.chip{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);padding:6px 14px;border-radius:999px;font-size:13.5px;color:#e6f2ff}
+/* tabs (sticky, floating card) */
+.tabsbar{position:sticky;top:14px;z-index:40;margin-top:-84px;margin-bottom:34px}
+.tabsinner{display:flex;gap:10px;overflow-x:auto;padding:14px 16px;max-width:1240px;margin:0 20px;background:#fff;border-radius:18px;box-shadow:var(--shadow-lg);border:1px solid var(--line);scrollbar-width:none}
+.tabsinner::-webkit-scrollbar{display:none}
+.rtab{display:flex;align-items:center;gap:8px;font-family:'Kanit',sans-serif;font-size:14.5px;font-weight:600;padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:.2s;white-space:nowrap;flex:0 0 auto}
+.rtab:hover{border-color:#b9dcf7;color:var(--navy);transform:translateY(-1px)}
+.rtab.active{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:0 6px 18px rgba(15,47,107,.28)}
+.tswatch{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
+.tcount{background:rgba(0,0,0,.08);color:inherit;font-size:11.5px;font-weight:700;padding:1px 8px;border-radius:999px}
+.rtab.active .tcount{background:rgba(255,255,255,.22)}
 
-/* price card */
-.pricecard{background:#fff;color:var(--ink);border-radius:24px;padding:30px 28px 26px;box-shadow:var(--shadow-lg);position:relative;text-align:center}
-.ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff8a00,#ff5b24);
-  color:#fff;font-family:'Kanit',sans-serif;font-weight:600;font-size:14px;padding:7px 22px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(255,91,36,.35)}
-.pricecard h2{font-size:19px;margin:16px 0 4px;color:var(--navy)}
-.pricecard .sub{font-size:14px;color:var(--muted);margin-bottom:14px}
-.old{color:#9aa9bd;text-decoration:line-through;font-size:20px;font-family:'Kanit',sans-serif}
-.now{display:flex;align-items:flex-start;justify-content:center;gap:6px;margin:2px 0 2px}
-.now .num{font-size:68px;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--navy-2),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.now .cur{font-family:'Kanit',sans-serif;font-weight:600;font-size:20px;color:var(--navy-2);margin-top:10px}
-.save{display:inline-block;background:#e8f7ee;color:#127a3e;font-weight:600;font-size:13.5px;padding:5px 14px;border-radius:999px;margin-bottom:18px}
-.perks{text-align:left;border-top:1px dashed var(--line);padding-top:16px;margin-bottom:20px}
-.perks li{list-style:none;font-size:14.5px;color:#33507c;padding:5px 0 5px 27px;position:relative}
-.perks li::before{content:"✓";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:var(--cyan);color:#fff;font-size:11px;display:grid;place-items:center;font-weight:700}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px 20px;border-radius:14px;
-  font-family:'Kanit',sans-serif;font-weight:600;font-size:16.5px;text-decoration:none;transition:.2s;border:none;cursor:pointer}
-.btn-fb{background:linear-gradient(135deg,#1877f2,#0b5ed7);color:#fff;box-shadow:0 10px 24px rgba(24,119,242,.35)}
-.btn-fb:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(24,119,242,.45)}
-.btn-ghost{background:#eef6ff;color:var(--navy-2);border:1.5px solid #cfe4fb;margin-top:9px}
-.btn-ghost:hover{background:#e2f0ff}
-.note{font-size:12.5px;color:var(--muted);margin-top:12px}
+/* groups */
+main{padding:0 0 80px}
+.rgroup{margin-bottom:52px;scroll-margin-top:110px}
+.rgroup.hide{display:none}
+.grouptitle{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.gswatch{width:14px;height:14px;border-radius:5px;flex:0 0 auto}
+.grouptitle h2{font-size:21px;font-weight:700;color:var(--navy)}
+.gcount{font-size:13px;color:var(--muted);font-weight:600;background:var(--white);border:1px solid var(--line);padding:3px 12px;border-radius:999px;margin-left:2px}
 
-.hbadges{display:flex;flex-wrap:wrap;gap:9px;margin:-8px 0 22px}
-.hb{background:rgba(255,212,83,.14);border:1px solid rgba(255,212,83,.45);color:#ffe9a8;font-weight:600;font-size:13.5px;padding:6px 14px;border-radius:999px}
-.life{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:14px;font-weight:600;padding:6px 15px;border-radius:999px;align-self:center}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.rcard{--accent:#29abe2;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.28s cubic-bezier(.2,.7,.3,1);display:flex;flex-direction:column;position:relative}
+.rcard.hide{display:none}
+.rcard::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);z-index:2}
+.rcard:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg);border-color:#b9dcf7}
+.cover{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:#eef5fc;cursor:pointer}
+.cover img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s cubic-bezier(.2,.7,.3,1)}
+.rcard:hover .cover img{transform:scale(1.08)}
+.hoverglow{position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.38) 100%);opacity:0;transition:.3s}
+.rcard:hover .hoverglow{opacity:1}
+.cover.soon img{opacity:.68;filter:saturate(.72) brightness(1.08) grayscale(.08)}
+.rcard-soon:hover .cover.soon img{opacity:.68;filter:saturate(.72) brightness(1.08) grayscale(.08)}
+.soonribbon{position:absolute;top:12px;right:-32px;background:#ffb020;color:#fff;font-size:12px;font-weight:700;padding:5px 38px;transform:rotate(35deg);box-shadow:0 3px 10px rgba(0,0,0,.18)}
+.rcard-soon{opacity:.92}
+.rcard-soon::before{background:#dbe4f0}
 
-/* ---------- feats ---------- */
-.feats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.feat{background:linear-gradient(180deg,#f7fbff,#eef6ff);border:1px solid var(--line);border-radius:20px;padding:24px 20px;transition:.25s}
-.feat:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b9dcf7}
-.fi{width:50px;height:50px;border-radius:15px;background:linear-gradient(135deg,var(--navy-2),var(--cyan));display:grid;place-items:center;font-size:24px;margin-bottom:13px;box-shadow:0 8px 18px rgba(41,171,226,.3)}
-.feat h3{font-size:17.5px;color:var(--navy);margin-bottom:7px;font-weight:600}
-.feat p{font-size:14px;color:var(--muted)}
+.__unused-latest-group{margin-bottom:52px}
+.__unused-latest-title{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.__unused-latest-title .__unused-latest-dot{width:14px;height:14px;border-radius:5px;background:linear-gradient(135deg,#ffb020,#ff5b7a);flex:0 0 auto}
+.__unused-latest-title h2{font-size:21px;font-weight:700;color:var(--navy)}
+.__unused-latest-badge{position:absolute;top:12px;left:12px;z-index:3;background:linear-gradient(135deg,#ffb020,#ff5b7a);color:#fff;font-family:'Kanit',sans-serif;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:0 6px 16px rgba(255,91,122,.28)}
+.__unused-latest-card{border:2px solid #b9dcf7;box-shadow:0 16px 38px rgba(41,171,226,.18)}
+.__unused-latest-card .cover{cursor:default}
+.__unused-latest-card .cover img{transition:.3s}
+.__unused-latest-card:hover .cover img{transform:scale(1.035)}
+.__unused-latest-card .ctabtn-soon{background:#eef2f8;color:var(--muted);cursor:default}
+.__unused-latest-card .ctabtn-soon:hover{background:#eef2f8;box-shadow:none;transform:none}
 
-/* ---------- stats ---------- */
-.stats{background:var(--white);padding:38px 0 6px}
-.statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.stat{background:linear-gradient(180deg,#f6fbff,#eef6ff);border:1px solid var(--line);border-radius:18px;padding:20px 16px;text-align:center}
-.stat .num{font-size:30px;font-weight:700;color:var(--navy-2)}
-.stat p{font-size:13.5px;color:var(--muted);margin-top:2px}
+.rbody{padding:16px 18px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.catchip{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;width:fit-content}
+.rbody h3{font-size:15.5px;font-weight:600;line-height:1.42;color:var(--ink);flex:1}
+.ctabtn{display:flex;align-items:center;justify-content:center;gap:7px;background:var(--navy);color:#fff;font-family:'Kanit',sans-serif;font-size:14px;font-weight:600;padding:10px 14px;border-radius:12px;transition:.2s;margin-top:2px}
+.ctabtn:hover{background:var(--cyan);box-shadow:0 8px 20px rgba(41,171,226,.35);transform:translateY(-1px)}
+.ctabtn svg{flex:0 0 auto;transition:.2s}
+.ctabtn:hover svg{transform:translate(2px,-2px)}
+.ctabtn-soon{background:#eef2f8;color:var(--muted);cursor:default}
+.ctabtn-soon:hover{background:#eef2f8;box-shadow:none;transform:none}
 
-/* ---------- gallery ---------- */
-.sec{padding:56px 0}
-.sechead{text-align:center;max-width:660px;margin:0 auto 34px}
-.kicker{display:inline-block;background:#e6f4fd;color:#0e7fb8;font-weight:600;font-size:13.5px;padding:6px 16px;border-radius:999px;margin-bottom:12px}
-.sechead h2{font-size:clamp(26px,3.6vw,36px);color:var(--navy);margin-bottom:10px}
-.sechead p{color:var(--muted);font-size:16px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.galtabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:0 0 26px}
-.galtab{font-family:'Kanit',sans-serif;font-size:14.5px;font-weight:600;padding:9px 20px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:.2s}
-.galtab:hover{border-color:#b9dcf7;color:var(--navy)}
-.galtab.active{background:var(--navy);border-color:var(--navy);color:#fff}
-.card.hide{display:none}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
-  transition:.25s;cursor:pointer;display:flex;flex-direction:column;outline:none}
-.card:hover,.card:focus-visible{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:#b9dcf7}
-.thumb{position:relative;aspect-ratio:1.42/1;overflow:hidden;background:#eaf3fc}
-.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.4s}
-.card:hover .thumb img{transform:scale(1.05)}
-.latest-card{position:relative;border:2px solid #2d8cff;box-shadow:0 14px 34px rgba(45,140,255,.22)}
-.latest-card::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:3;border-radius:20px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.7)}
-.latest-badge{position:absolute;top:12px;left:12px;z-index:4;background:linear-gradient(135deg,#ffb400,#ff6b35);color:#fff;font-family:'Kanit',sans-serif;font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px;box-shadow:0 7px 16px rgba(255,107,53,.28)}
-.zoom{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(13,42,92,.85));color:#fff;
-  font-size:13.5px;padding:26px 14px 12px;opacity:0;transition:.25s;font-weight:500}
-.card:hover .zoom,.card:focus-visible .zoom{opacity:1}
-figcaption{padding:16px 18px 20px;flex:1;display:flex;flex-direction:column}
-.tag{display:inline-block;align-self:flex-start;background:#eaf6ff;color:#1174ad;font-size:12px;font-weight:600;padding:4px 11px;border-radius:999px;margin-bottom:9px}
-figcaption h3{font-size:17px;color:var(--navy);margin-bottom:6px;font-weight:600}
-figcaption p{font-size:14px;color:var(--muted)}
+/* footer */
+footer{background:var(--navy);color:#cfe0f7;padding:30px 0;text-align:center;font-size:13.5px}
+footer b{color:#fff}
 
-/* ---------- cta ---------- */
-.cta{background:linear-gradient(135deg,#0d2a5c,#1a4ea0 60%,#29abe2);color:#fff;border-radius:28px;padding:48px 32px;text-align:center;position:relative;overflow:hidden}
-.cta::before{content:"";position:absolute;inset:0;opacity:.2;
-  background-image:linear-gradient(rgba(255,255,255,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.3) 1px,transparent 1px);background-size:46px 46px;
-  mask-image:radial-gradient(60% 70% at 50% 50%,#000,transparent)}
-.cta > *{position:relative;z-index:2}
-.cta h2{font-size:clamp(24px,3.4vw,34px);margin-bottom:10px}
-.cta p{color:#d3e6ff;margin-bottom:8px}
-.ctaprice{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:14px 0 22px;flex-wrap:wrap}
-.ctaprice .o{text-decoration:line-through;color:#a9c4e8;font-size:22px;font-family:'Kanit',sans-serif}
-.ctaprice .n{font-family:'Kanit',sans-serif;font-weight:700;font-size:52px;color:#ffd453}
-.ctabtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.ctabtns .btn{width:auto;min-width:240px}
-.btn-white{background:#fff;color:var(--navy-2)}
-.btn-white:hover{transform:translateY(-2px)}
-
-footer{text-align:center;padding:34px 20px 44px;color:var(--muted);font-size:13.5px}
-footer img{width:44px;border-radius:12px;margin-bottom:10px;opacity:.9}
-
-/* ---------- lightbox ---------- */
-.lb{position:fixed;inset:0;background:rgba(8,22,48,.93);display:none;place-items:center;z-index:99;padding:24px;backdrop-filter:blur(4px)}
-.lb.on{display:grid}
-.lb figure{max-width:1000px;width:100%;text-align:center}
-.lb img{max-width:100%;max-height:74vh;border-radius:14px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
-.lb h3{color:#fff;font-size:19px;margin-top:16px}
-.lb p{color:#b8cfef;font-size:14.5px;margin-top:5px}
-.lb button{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.3);
-  width:46px;height:46px;border-radius:50%;font-size:20px;cursor:pointer;display:grid;place-items:center;transition:.2s}
-.lb button:hover{background:rgba(255,255,255,.3)}
-.lb .x{top:20px;right:20px} .lb .p{left:18px;top:50%} .lb .n{right:18px;top:50%}
-
-@media(max-width:900px){
-  .hero .wrap{grid-template-columns:1fr;gap:34px}
-  .gal{grid-template-columns:repeat(2,1fr)}
-  .statgrid{grid-template-columns:repeat(2,1fr)}
-  .feats{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:600px){
-  .hero{padding:44px 0 60px}
-  .gal{grid-template-columns:1fr;gap:18px}
-  .feats{grid-template-columns:1fr}
-  .lb .p{left:8px} .lb .n{right:8px}
-  .cta{padding:38px 20px;border-radius:22px}
+@media(max-width:640px){
+  .header{padding:32px 0 150px}
+  .htext h1{font-size:26px}
+  .htext p{font-size:15px}
+  .tabsbar{margin-top:-108px}
+  .tabsinner{margin:0 12px;padding:10px}
+  .rgrid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:14px}
+  .rbody{padding:12px 13px 14px}
+  .rbody h3{font-size:13.5px}
+  .ctabtn{font-size:12.5px;padding:9px 10px}
+  .wrap{padding:0 14px}
 }
 </style>
 </head>
 <body>
 
-<div class="topbar">🎉 สมัครครั้งเดียว <b>299 บาท</b> <b>ใช้ได้ฟรีตลอดชีพ</b> ไม่มีค่าใช้จ่ายรายเดือน</div>
-
-<header class="hero">
-  <div class="grid-bg"></div>
-  <div class="wrap">
-    <div>
-      <div class="brand"><img src="images/image-01.webp" alt="TEACHCODE"><span>TEACHCODE</span></div>
-      <div class="pill"><i></i> เปิดรับสมาชิก</div>
-      <h1>กลุ่ม VIP สื่อการสอน<br><em>Coding ครบทุกระดับชั้น</em></h1>
-      <p class="lede">รวมใบงาน แผนการสอน เกม นิทาน และคู่มือกิจกรรมโค้ดดิ้ง พร้อมใช้ในห้องเรียนทันที <b style="color:#ffd453">สมัครครั้งเดียว ใช้ได้ฟรีตลอดชีพ</b> พร้อมสื่อใหม่ โปรแกรมใหม่ และแนวทางการสอนใหม่ ๆ ที่อัปเดตลงกลุ่มเรื่อย ๆ</p>
-      <div class="hbadges">
-        <span class="hb">♾️ จ่ายครั้งเดียว ตลอดชีพ</span><span class="hb">🔄 อัปเดตสื่อใหม่ตลอด</span><span class="hb">🚫 ไม่มีค่ารายเดือน</span>
-      </div>
-      <div class="chips">
-        <span class="chip">Unplugged Coding</span><span class="chip">ScratchJr</span><span class="chip">Scratch</span>
-        <span class="chip">EduBlocks</span><span class="chip">Python 3</span><span class="chip">Bee-Bot</span><span class="chip">ใบงาน &amp; แผนการสอน</span>
-      </div>
-    </div>
-
-    <div class="pricecard">
-      <div class="ribbon">⚡ จำนวนจำกัด</div>
-      <h2>สมาชิกกลุ่ม VIP TEACHCODE</h2>
-      <p class="sub">จ่ายครั้งเดียว อยู่ในกลุ่มได้ตลอดชีพ</p>
-      <div class="now"><span class="num">299</span><span class="cur">บาท</span></div>
-      <ul class="perks">
-        <li><b>สมัครครั้งเดียว ฟรีตลอดชีพ</b> ไม่มีค่าต่ออายุ ไม่มีรายเดือน</li>
-        <li>เข้าถึงสื่อทั้งหมดในกลุ่ม ดาวน์โหลดฟรีไม่จำกัด</li>
-        <li>ไฟล์พร้อมใช้ ปริ้นได้ทันที (PDF / ใบงาน / สไลด์)</li>
-        <li><b>สื่อใหม่อัปเดตลงกลุ่มเรื่อย ๆ</b> ได้รับฟรีทุกชุด ไม่ต้องจ่ายเพิ่ม</li>
-        <li>แนะนำโปรแกรม/เครื่องมือใหม่ และแนวทางการสอนใหม่ ๆ</li>
-        <li>ปรึกษาการนำไปใช้สอนได้ในกลุ่ม</li>
-      </ul>
-      <a class="btn btn-fb" href="https://m.me/YOUR-PAGE-ID" target="_blank" rel="noopener" id="fb1"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg> ทักแชทสมัครทาง Facebook</a>
-      <a class="btn btn-ghost" href="#gallery">ดูตัวอย่างสื่อในกลุ่ม ↓</a>
-      <p class="note">* สมาชิกภาพตลอดชีพ ไม่มีวันหมดอายุ</p>
-    </div>
+<header class="header"><div class="wrap headwrap">
+  <div class="brand"><span class="dot"></span>TEACH CODE</div>
+</div>
+<div class="wrap htext">
+  <span class="kicker">คลังสื่อการสอนโค้ดดิ้ง</span>
+  <h1>คลังไฟล์สื่อการสอน<br><span>สำหรับคุณครูและผู้ปกครอง</span></h1>
+  <p>รวมสื่อการสอนโค้ดดิ้งทั้งหมดไว้ในที่เดียว จัดหมวดหมู่ให้ค้นหาง่าย คลิกที่ภาพปกหรือปุ่ม "เปิดโฟลเดอร์ไฟล์" เพื่อเข้าสู่ไฟล์ในกูเกิลไดรฟ์ได้ทันที</p>
+  <div class="hstats">
+    <div class="hstat"><b>22</b><span>ชุดสื่อทั้งหมด</span></div>
+    <div class="hstat"><b>6</b><span>หมวดหมู่</span></div>
+    <div class="hstat"><b>19</b><span>พร้อมดาวน์โหลด</span></div>
   </div>
+</div>
 </header>
 
-<section class="stats"><div class="wrap"><div class="statgrid">
-  <div class="stat"><div class="num">12+</div><p>ชุดสื่อการสอนตัวอย่าง</p></div>
-  <div class="stat"><div class="num">100+</div><p>ใบงานพร้อมปริ้น</p></div>
-  <div class="stat"><div class="num">ตลอดชีพ</div><p>จ่ายครั้งเดียว ไม่มีต่ออายุ</p></div>
-  <div class="stat"><div class="num">อัปเดตตลอด</div><p>สื่อใหม่ลงกลุ่มเรื่อย ๆ</p></div>
-</div></div></section>
+<div class="tabsbar"><div class="tabsinner">
+  <button class="rtab active" data-filter="all">ทั้งหมด<span class="tcount">22</span></button>
+    <button class="rtab" data-filter="flock"><span class="tswatch" style="background:#7654d8"></span>Flock XR<span class="tcount">1</span></button>
+    <button class="rtab" data-filter="microbit"><span class="tswatch" style="background:#20b2a6"></span>Micro:bit<span class="tcount">1</span></button>
+    <button class="rtab" data-filter="python"><span class="tswatch" style="background:#d9a441"></span>Python<span class="tcount">3</span></button>
+    <button class="rtab" data-filter="scratch"><span class="tswatch" style="background:#ff8a00"></span>Scratch<span class="tcount">5</span></button>
+    <button class="rtab" data-filter="worksheet"><span class="tswatch" style="background:#ff5b7a"></span>ใบงาน<span class="tcount">7</span></button>
+    <button class="rtab" data-filter="other"><span class="tswatch" style="background:#20b2a6"></span>อื่นๆ<span class="tcount">5</span></button>
+</div></div>
 
-<section class="sec" id="gallery"><div class="wrap">
-  <div class="sechead">
-    <span class="kicker">✨ อัปเดตล่าสุด + ตัวอย่างสื่อในกลุ่ม VIP</span>
-    <h2>สื่อการสอนโค้ดดิ้งที่คุณจะได้รับ</h2>
-    <p>คลิกที่ภาพเพื่อดูขนาดเต็ม — ทุกชุดออกแบบมาให้ครูนำไปใช้สอนได้ทันที และนี่เป็นเพียงส่วนหนึ่ง ยังมีสื่อใหม่เพิ่มเข้ากลุ่มเรื่อย ๆ</p>
-  </div>
-  <div class="galtabs" role="tablist">
-    <button class="galtab active" data-filter="all">ทั้งหมด</button>
-    <button class="galtab" data-filter="worksheet">ใบงาน</button>
-    <button class="galtab" data-filter="python">Python</button>
-    <button class="galtab" data-filter="scratch">Scratch</button>
-    <button class="galtab" data-filter="microbit">Micro:bit</button>
-    <button class="galtab" data-filter="flockxr">Flock XR</button>
-    <button class="galtab" data-filter="other">อื่นๆ</button>
-  </div>
-  <div class="gal">
-      <figure class="card latest-card" data-i="19" tabindex="0" data-cat="flockxr">
-        <div class="thumb">
-          <span class="latest-badge">อัปเดตล่าสุด</span><img src="images/image-02.png" alt="การเขียนโปรแกรมสร้างโลก 3D ด้วย Flock XR">
-          <div class="zoom">คลิกเพื่อดูภาพขนาดเต็ม</div>
-        </div>
-        <figcaption><span class="tag">Flock XR · 3D / Block Coding</span><h3>การเขียนโปรแกรมสร้างโลก 3D ด้วย Flock XR</h3><p>4 โปรเจกต์การเขียนโปรแกรม สร้างโลก 3D ด้วย Block Coding</p></figcaption>
-      </figure>
-      <figure class="card latest-card" data-i="20" tabindex="0" data-cat="microbit">
-        <div class="thumb">
-          <span class="latest-badge">อัปเดตล่าสุด</span><img src="images/image-03.png" alt="Basic Micro:bit 14 กิจกรรม">
-          <div class="zoom">คลิกเพื่อดูภาพขนาดเต็ม</div>
-        </div>
-        <figcaption><span class="tag">BBC micro:bit · Basic</span><h3>Basic Micro:bit 14 กิจกรรม</h3><p>กิจกรรมพื้นฐานแบบง่าย ๆ พร้อมคู่มือและตัวอย่างการใช้งาน micro:bit</p></figcaption>
-      </figure>
-<figure class="card" data-i="13" tabindex="0" data-cat="python">
-        <div class="thumb">
-          <img src="images/image-04.png" alt="ฝึก Python เรื่อง Loop ผ่าน Pattern ดาว" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Python · Loop</span>
-          <h3>ฝึก Python เรื่อง Loop ผ่าน Pattern ดาว</h3>
-          <p>สื่อฝึกเขียน Python เรื่อง Loop ผ่าน Pattern ดาว พร้อมบัตรโจทย์และแผ่นเฉลยสำหรับนำไปใช้สอนได้ทันที</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="0" tabindex="0" data-cat="other">
-        <div class="thumb">
-          <img src="images/image-05.png" alt="สร้างมินิโปรเจกต์ Animation & Game ด้วยภาษาบล็อกและ Python">
-          <div class="zoom">คลิกเพื่อดูภาพขนาดเต็ม</div>
-        </div>
-        <figcaption>
-          <span class="tag">Animation &amp; Game</span>
-          <h3>สร้างมินิโปรเจกต์ Animation &amp; Game</h3>
-          <p>ด้วยภาษาบล็อกและ Python ผ่านเว็บ</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="1" tabindex="0" data-cat="python">
-        <div class="thumb"><img src="images/image-06.webp" alt="จากภาษาบล็อกสู่ภาษาไพทอน ด้วย EduBlocks" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">EduBlocks · Python</span>
-          <h3>จากภาษาบล็อกสู่ภาษาไพทอน ด้วย EduBlocks</h3>
-          <p>แนวทางการจัดการเรียนการสอน 6 บทเรียน ฉบับภาษาไทย พร้อมสไลด์และแผนการสอนครบถ้วน</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="2" tabindex="0" data-cat="python">
-        <div class="thumb"><img src="images/image-07.webp" alt="10 การ์ดเขียนโค้ด Python 3 สำหรับผู้เริ่มต้น" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Python · การ์ดกิจกรรม</span>
-          <h3>10 การ์ดเขียนโค้ด Python 3 สำหรับผู้เริ่มต้น</h3>
-          <p>การ์ด 123 Coding Cards เทียบ Scratch · EduBlocks · Python ในใบเดียว</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="4" tabindex="0" data-cat="scratch">
-        <div class="thumb"><img src="images/image-08.webp" alt="ชุดกิจกรรมสร้างสรรค์ด้วย ScratchJr" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">ScratchJr · ประถมต้น</span>
-          <h3>ชุดกิจกรรมสร้างสรรค์ด้วย ScratchJr</h3>
-          <p>กิจกรรมที่ 1–9 เรียนรู้การเขียนโปรแกรมผ่านกิจกรรมแสนสนุกสำหรับเด็กเล็ก</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="6" tabindex="0" data-cat="scratch">
-        <div class="thumb"><img src="images/image-09.webp" alt="คู่มือการสร้างเกม FUEL UP ด้วย Scratch" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Scratch · การเงิน</span>
-          <h3>คู่มือการสร้างเกม FUEL UP ด้วย Scratch</h3>
-          <p>กิจกรรมการเรียนรู้การเลือกเติมน้ำมันอย่างคุ้มค่า ฝึกคำนวณ วางแผน และตัดสินใจ</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="15" tabindex="0" data-cat="scratch">
-        <div class="thumb"><img src="images/image-10.webp" alt="ไทยช่วยไทย พลัส คำนวณ ด้วย Scratch" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Scratch · คำนวณ</span>
-          <h3>เกมร้านค้าไทยช่วยไทย พลัส ฝึกคำนวณด้วย Scratch</h3>
-          <p>จำลองร้านค้า ฝึกทักษะคำนวณเงินและตรรกะผ่านเกม Scratch สนุกและใช้สอนได้จริง</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="16" tabindex="0" data-cat="scratch">
-        <div class="thumb"><img src="images/image-11.webp" alt="คู่มือ 10 Ep Animation ระบบสุริยะด้วย Scratch" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Scratch · Animation</span>
-          <h3>คู่มือทำ Animation ระบบสุริยะ 10 Ep ด้วย Scratch</h3>
-          <p>สอนทำแอนิเมชันระบบสุริยะทีละขั้นตอน 10 ตอน เข้าใจง่าย เหมาะสำหรับฝึกสร้างแอนิเมชันด้วย Scratch</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="3" tabindex="0" data-cat="other">
-        <div class="thumb"><img src="images/image-12.webp" alt="10 ภารกิจ Bee-Bot Coding Online" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">หุ่นยนต์ · ปฐมวัย</span>
-          <h3>10 ภารกิจ Bee-Bot Coding Online</h3>
-          <p>ภารกิจหุ่นยนต์ Bee-Bot บนโปรแกรมจำลองออนไลน์ ฝึกอัลกอริทึมและการวางแผน</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="5" tabindex="0" data-cat="other">
-        <div class="thumb"><img src="images/image-13.webp" alt="เกมจำลองแผ่นดินไหว SEISMO-SIM พร้อมใบงาน" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">เกม · ความปลอดภัย</span>
-          <h3>เกมจำลองแผ่นดินไหว SEISMO-SIM พร้อมใบงาน</h3>
-          <p>เรียนรู้ ทดลอง เข้าใจ ปลอดภัย ผ่านเกมจำลอง 3 สถานการณ์ พร้อมใบงานประกอบ</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="14" tabindex="0" data-cat="microbit">
-        <div class="thumb"><img src="images/image-14.webp" alt="ชุดคู่มือและบัตรการเชื่อมต่อ MICRO:BIT BASIC" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Micro:bit · อุปกรณ์</span>
-          <h3>ชุดคู่มือและบัตรการเชื่อมต่อ MICRO:BIT BASIC</h3>
-          <p>12 อุปกรณ์ 12 บัตรการ์ด พร้อมคู่มือประกอบแบบละเอียด เรียนรู้การต่อวงจรและเขียนโปรแกรมอย่างสนุก</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="17" tabindex="0" data-cat="other">
-        <div class="thumb"><img src="images/image-15.webp" alt="ระบบห้องซ้อมข้อสอบ พร้อมวิเคราะห์จุดอ่อนด้วย AI" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">ระบบ AI · ข้อสอบ</span>
-          <h3>ระบบห้องซ้อมข้อสอบ วิเคราะห์จุดอ่อนจุดแข็งด้วย AI</h3>
-          <p>ฝึกทำข้อสอบเลือกวิชาและจำนวนข้อได้เอง พร้อมระบบวิเคราะห์จุดอ่อน รันข้อสอบเสริมจุดอ่อนให้อัตโนมัติด้วย AI และรายงานผลพร้อมกราฟ</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="7" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-16.webp" alt="Worksheet Coding Detective" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">ใบงาน · ตรรกะ</span>
-          <h3>Worksheet Coding Detective</h3>
-          <p>ใบงานฝึกคิดแบบนักสืบ เก็บเบาะแส วิเคราะห์ และสรุปผลอย่างเป็นระบบ</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="9" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-17.webp" alt="ตามหาเส้นทางให้ถูกต้อง 11 ใบงาน" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">ใบงาน · เส้นทาง</span>
-          <h3>ตามหาเส้นทางให้ถูกต้อง 11 ใบงาน</h3>
-          <p>ใบงานหาเส้นทางบนตาราง ฝึกคิดเชิงคำนวณและการแก้ปัญหาแบบเป็นขั้นตอน</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="11" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-18.webp" alt="อันปลั๊กโค้ดดิ้ง 8 ใบงานฝึกกระบวนการคิด" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">Unplugged · ตรรกะ</span>
-          <h3>อันปลั๊กโค้ดดิ้ง 8 ใบงานฝึกกระบวนการคิด</h3>
-          <p>ใบงานลูกศรบนตาราง พัฒนาการคิดเชิงตรรกะ ทำได้ด้วยตนเอง ไม่ต้องใช้คอมพิวเตอร์</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="12" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-19.webp" alt="แบ่งปัน Unplug Coding ช่วยต้นกล้าทำภารกิจ" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">สถานการณ์จริง · 5 วัน</span>
-          <h3>แบ่งปัน Unplug Coding ช่วยต้นกล้าทำภารกิจ</h3>
-          <p>ภารกิจ 5 วัน ใช้โครงการไทยช่วยไทย ฝึก Algorithm · If-Else · Debugging</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="10" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-20.webp" alt="นิทาน Coding กระจกวิเศษกับคำทำนายลับ" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">นิทาน · ภารกิจ</span>
-          <h3>นิทาน Coding กระจกวิเศษกับคำทำนายลับ</h3>
-          <p>นิทานพร้อม 5 ภารกิจ ผสานการอ่านกับการคิดเชิงตรรกะได้อย่างลงตัว</p>
-        </figcaption>
-      </figure>
-      <figure class="card" data-i="8" tabindex="0" data-cat="worksheet">
-        <div class="thumb"><img src="images/image-21.webp" alt="ใบงาน Coding ฝึกคิดเป็นขั้นตอน 17 ใบงาน" loading="lazy"><span class="zoom">🔍 ดูเต็มภาพ</span></div>
-        <figcaption>
-          <span class="tag">ใบงาน · Unplugged</span>
-          <h3>ใบงาน Coding ฝึกคิดเป็นขั้นตอน 17 ใบงาน</h3>
-          <p>ลากเส้นตามคำสั่งลูกศรจนครบทุกช่อง ได้ภาพน่ารัก ฝึกลำดับขั้นตอนและทิศทาง</p>
-        </figcaption>
-      </figure>
-      
-      <figure class="card" data-i="18" tabindex="0" data-cat="scratch">
-        <div class="thumb"><img src="images/image-22.png" alt="Scratch การเงินและการลงทุน"></div>
-        <figcaption>
-          <span class="tag">Scratch · การเงินและการลงทุน</span>
-          <h3>Scratch การเงินและการลงทุน</h3>
-          <p>กิจกรรมจำลองการซื้อ–ขายหุ้นและทองคำ ฝึกวางแผน ตัดสินใจ และเรียนรู้แนวคิดการเงินผ่านเกม Scratch</p>
-        </figcaption>
-      </figure>
-  </div></div>
-</div></section>
-
-<section class="sec" id="lifetime" style="padding-top:0"><div class="wrap">
-  <div class="sechead">
-    <span class="kicker">จ่ายครั้งเดียว ได้ตลอดชีพ</span>
-    <h2>สมัครวันนี้ครั้งเดียว แล้วรับสื่อใหม่ฟรีตลอดไป</h2>
-    <p>ไม่มีค่าต่ออายุ ไม่มีรายเดือน — ทุกอย่างที่เพิ่มเข้ากลุ่มหลังจากนี้ สมาชิกได้รับฟรีทั้งหมด</p>
-  </div>
-  <div class="feats">
-    <div class="feat"><div class="fi">♾️</div><h3>สมาชิกภาพตลอดชีพ</h3><p>ชำระครั้งเดียว 299 บาท อยู่ในกลุ่มได้ตลอด ไม่มีวันหมดอายุ ไม่ต้องต่ออายุรายปีหรือรายเดือน</p></div>
-    <div class="feat"><div class="fi">📚</div><h3>สื่อใหม่เพิ่มเรื่อย ๆ</h3><p>ใบงาน แผนการสอน เกม และนิทานโค้ดดิ้งชุดใหม่ ทยอยลงกลุ่มต่อเนื่อง ดาวน์โหลดได้ฟรีทุกชุด</p></div>
-    <div class="feat"><div class="fi">💻</div><h3>โปรแกรม/เครื่องมือใหม่</h3><p>มีเครื่องมือหรือแพลตฟอร์มโค้ดดิ้งใหม่ ๆ ออกมา จะรีวิวและทำสื่อประกอบให้ใช้สอนได้ทันที</p></div>
-    <div class="feat"><div class="fi">🧭</div><h3>แนวทางการสอนใหม่ ๆ</h3><p>เทคนิคการสอน ไอเดียกิจกรรม และแนวทางจัดการเรียนรู้ที่อัปเดตตามหลักสูตรและเทรนด์การศึกษา</p></div>
-  </div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="cta">
-    <h2>สมัครสมาชิก VIP วันนี้</h2>
-    <p>จ่ายครั้งเดียว ใช้ได้ฟรีตลอดชีพ — รับสื่อทั้งหมดที่เห็นด้านบน<br>พร้อมสื่อใหม่ โปรแกรมใหม่ และแนวทางการสอนใหม่ ๆ ที่จะอัปเดตลงกลุ่มเรื่อย ๆ</p>
-    <div class="ctaprice"><span class="n">299 บาท</span><span class="life">ครั้งเดียว · ตลอดชีพ</span></div>
-    <div class="ctabtns">
-      <a class="btn btn-white" href="https://m.me/YOUR-PAGE-ID" target="_blank" rel="noopener" id="fb2"><svg width="20" height="20" viewBox="0 0 24 24" fill="#1877f2"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0022 12z"/></svg> ทักแชท Messenger เพื่อสมัคร</a>
+<main class="wrap">
+  <div class="rgroup" id="grp-flock">
+    <div class="grouptitle"><span class="gswatch" style="background:#7654d8"></span><h2>Flock XR</h2><span class="gcount">1 ชุด</span></div>
+    <div class="rgrid">
+      <article class="rcard" data-cat="flock" style="--accent:#7654d8">
+        <a class="cover" href="https://drive.google.com/drive/folders/1bpu5uOYDUSQe1QEkTYqnk4k8xkkO9b0I?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-01.png" alt="สร้างโลก 3D ด้วย Flock XR"><span class="hoverglow"></span></a>
+        <div class="rbody"><span class="catchip" style="background:#7654d818;color:#7654d8">Flock XR</span><h3>สร้างโลก 3D ด้วย Flock XR</h3><a class="ctabtn" href="https://drive.google.com/drive/folders/1bpu5uOYDUSQe1QEkTYqnk4k8xkkO9b0I?usp=drive_link" target="_blank" rel="noopener">เปิดโฟลเดอร์ไฟล์ ↗</a></div>
+      </article>
     </div>
   </div>
-</div></section>
+  <div class="rgroup" id="grp-microbit">
+    <div class="grouptitle"><span class="gswatch" style="background:#20b2a6"></span><h2>Micro:bit</h2><span class="gcount">1 ชุด</span></div>
+    <div class="rgrid">
+      <article class="rcard" data-cat="microbit" style="--accent:#20b2a6">
+        <a class="cover" href="https://drive.google.com/drive/folders/1iOLz4_IK_NJUmPRoiDubboFHgREorOji?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-02.png" alt="Basic Micro:bit 14 กิจกรรม"><span class="hoverglow"></span></a>
+        <div class="rbody"><span class="catchip" style="background:#20b2a618;color:#20b2a6">Micro:bit</span><h3>Basic Micro:bit 14 กิจกรรม</h3><a class="ctabtn" href="https://drive.google.com/drive/folders/1iOLz4_IK_NJUmPRoiDubboFHgREorOji?usp=drive_link" target="_blank" rel="noopener">เปิดโฟลเดอร์ไฟล์ ↗</a></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="rgroup" id="grp-python">
+      <div class="grouptitle"><span class="gswatch" style="background:#d9a441"></span><h2>Python</h2><span class="gcount">3 ชุด</span></div>
+      <div class="rgrid">
+      <article class="rcard" data-cat="python" style="--accent:#d9a441">
+        <a class="cover" href="https://drive.google.com/drive/folders/1kPOKiZHL8ZmzbYkrZ_vk4MfJLhBUOqtF?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-03.png" alt="ฝึก Python เรื่อง Loop ผ่าน Pattern ดาว" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fef6e6;color:#8a5a00">Python</span>
+          <h3>ฝึก Python เรื่อง Loop ผ่าน Pattern ดาว</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1kPOKiZHL8ZmzbYkrZ_vk4MfJLhBUOqtF?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="python" style="--accent:#d9a441">
+        <a class="cover" href="https://drive.google.com/drive/folders/1sMKnx7x6WidtxykTIaHsilSqL75njZz7?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-04.webp" alt="จากภาษาบล็อกสู่ภาษาไพทอน ด้วย EduBlocks" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fef6e6;color:#8a5a00">Python</span>
+          <h3>จากภาษาบล็อกสู่ภาษาไพทอน ด้วย EduBlocks</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1sMKnx7x6WidtxykTIaHsilSqL75njZz7?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="python" style="--accent:#d9a441">
+        <a class="cover" href="https://drive.google.com/drive/folders/1GMxjUtcgtDWjRCEvLoTc1J2Bl7EodF-D?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-05.webp" alt="10 การ์ดเขียนโค้ด Python 3 สำหรับผู้เริ่มต้น" loading="lazy"></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fef6e6;color:#8a5a00">Python</span>
+          <h3>10 การ์ดเขียนโค้ด Python 3 สำหรับผู้เริ่มต้น</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1GMxjUtcgtDWjRCEvLoTc1J2Bl7EodF-D?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="rgroup" id="grp-scratch">
+      <div class="grouptitle"><span class="gswatch" style="background:#ff8a00"></span><h2>Scratch</h2><span class="gcount">5 ชุด</span></div>
+      <div class="rgrid">
+      <article class="rcard" data-cat="scratch" style="--accent:#ff8a00">
+        <a class="cover" href="https://drive.google.com/drive/folders/1-HPCUSY6E5qDKVTNkZhLgIX1DqoVDyQf?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-06.webp" alt="Scratch การเงินและการลงทุน" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fff2e2;color:#c15a00">Scratch</span>
+          <h3>Scratch การเงินและการลงทุน</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1-HPCUSY6E5qDKVTNkZhLgIX1DqoVDyQf?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="scratch" style="--accent:#ff8a00">
+        <a class="cover" href="https://drive.google.com/drive/folders/14eTncFov0iuSP2Zso0wpeUBRzVMTypuz?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-07.webp" alt="ชุดกิจกรรมสร้างสรรค์ด้วย ScratchJr" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fff2e2;color:#c15a00">Scratch</span>
+          <h3>ชุดกิจกรรมสร้างสรรค์ด้วย ScratchJr</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/14eTncFov0iuSP2Zso0wpeUBRzVMTypuz?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="scratch" style="--accent:#ff8a00">
+        <a class="cover" href="https://drive.google.com/drive/folders/167riEwNREDjwVK7BFRZ-pcy-8912cXiD?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-08.webp" alt="คู่มือการสร้างเกม FUEL UP ด้วย Scratch" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fff2e2;color:#c15a00">Scratch</span>
+          <h3>คู่มือการสร้างเกม FUEL UP ด้วย Scratch</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/167riEwNREDjwVK7BFRZ-pcy-8912cXiD?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard rcard-soon" data-cat="scratch" style="--accent:#ff8a00">
+        <div class="cover soon"><img src="images/image-09.webp" alt="เกมร้านค้าไทยช่วยไทย พลัส ฝึกคำนวณด้วย Scratch" loading="lazy"><span class="soonribbon">เร็วๆ นี้</span></div>
+        <div class="rbody">
+          <span class="catchip" style="background:#fff2e2;color:#c15a00">Scratch</span>
+          <h3>เกมร้านค้าไทยช่วยไทย พลัส ฝึกคำนวณด้วย Scratch</h3>
+          <span class="ctabtn ctabtn-soon"><span>เร็วๆ นี้</span></span>
+        </div>
+      </article>
+      <article class="rcard" data-cat="scratch" style="--accent:#ff8a00">
+        <a class="cover" href="https://drive.google.com/drive/folders/12Cs6mGf3zPJCHmP_g88NCtie5S3ByXs5?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-10.webp" alt="คู่มือทำ Animation ระบบสุริยะ 10 Ep ด้วย Scratch" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#fff2e2;color:#c15a00">Scratch</span>
+          <h3>คู่มือทำ Animation ระบบสุริยะ 10 Ep ด้วย Scratch</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/12Cs6mGf3zPJCHmP_g88NCtie5S3ByXs5?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      </div>
+    </div>
+
+    <div class="rgroup" id="grp-worksheet">
+      <div class="grouptitle"><span class="gswatch" style="background:#ff5b7a"></span><h2>ใบงาน</h2><span class="gcount">7 ชุด</span></div>
+      <div class="rgrid">
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1gKEOOTNL4VfJ4iX9aM81TAVY3Xr4c8mJ?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-11.png" alt="ชุดโจทย์บัตรการ์ด 15 แผ่น พร้อมเฉลย" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>ชุดโจทย์บัตรการ์ด 15 แผ่น พร้อมเฉลย</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1gKEOOTNL4VfJ4iX9aM81TAVY3Xr4c8mJ?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1SFWlitvFpgEmTnQAzUh0QKwEHLafTr_B?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-12.webp" alt="Worksheet Coding Detective" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>Worksheet Coding Detective</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1SFWlitvFpgEmTnQAzUh0QKwEHLafTr_B?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/17Nqmwgzwy1kCi9q8BhLm4XDP8k5pDkfC?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-13.webp" alt="ตามหาเส้นทางให้ถูกต้อง 11 ใบงาน" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>ตามหาเส้นทางให้ถูกต้อง 11 ใบงาน</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/17Nqmwgzwy1kCi9q8BhLm4XDP8k5pDkfC?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1LGWcwga_FXluLmXv2oU_jz39x732iSiO?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-14.webp" alt="อันปลั๊กโค้ดดิ้ง 8 ใบงานฝึกกระบวนการคิด" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>อันปลั๊กโค้ดดิ้ง 8 ใบงานฝึกกระบวนการคิด</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1LGWcwga_FXluLmXv2oU_jz39x732iSiO?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1Zhb5-iLXUy_Wvc6J40RLGuZEYNC0K9jW?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-15.webp" alt="แบ่งปัน Unplug Coding ช่วยต้นกล้าทำภารกิจ" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>แบ่งปัน Unplug Coding ช่วยต้นกล้าทำภารกิจ</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1Zhb5-iLXUy_Wvc6J40RLGuZEYNC0K9jW?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1CDLXrB3CP-7d7BfgDqvw6jflGNs08MhQ?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-16.webp" alt="นิทาน Coding กระจกวิเศษกับคำทำนายลับ" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>นิทาน Coding กระจกวิเศษกับคำทำนายลับ</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1CDLXrB3CP-7d7BfgDqvw6jflGNs08MhQ?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="worksheet" style="--accent:#ff5b7a">
+        <a class="cover" href="https://drive.google.com/drive/folders/1Xng0fwS2_X5Ze-IvGJlidOgHtnpSCzQb?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-17.webp" alt="ใบงาน Coding ฝึกคิดเป็นขั้นตอน 17 ใบงาน" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#ffe9ee;color:#c81f45">ใบงาน</span>
+          <h3>ใบงาน Coding ฝึกคิดเป็นขั้นตอน 17 ใบงาน</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1Xng0fwS2_X5Ze-IvGJlidOgHtnpSCzQb?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      
+      </div>
+    </div>
+
+    <div class="rgroup" id="grp-other">
+      <div class="grouptitle"><span class="gswatch" style="background:#20b2a6"></span><h2>อื่นๆ</h2><span class="gcount">5 ชุด</span></div>
+      <div class="rgrid">
+      <article class="rcard" data-cat="other" style="--accent:#20b2a6">
+        <div class="cover">
+          <img src="images/image-18.png" alt="สร้างมินิโปรเจกต์ Animation & Game ด้วยภาษาบล็อกและ Python">
+          <span class="soonribbon">เร็วๆ นี้</span>
+          <span class="hoverglow"></span>
+        </div>
+        <div class="rbody">
+          <span class="catchip" style="background:#eaf7ff;color:#0d6fa8">Animation &amp; Game</span>
+          <h3>สร้างมินิโปรเจกต์ Animation &amp; Game ด้วยภาษาบล็อกและ Python</h3>
+          <span class="ctabtn ctabtn-soon"><span>เร็วๆ นี้</span></span>
+        </div>
+      </article>
+      <article class="rcard" data-cat="other" style="--accent:#20b2a6">
+        <a class="cover" href="https://drive.google.com/drive/folders/1m4s3ETzLxJYlPC1tgJsubrt1vcs8hR6w?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-19.webp" alt="10 ภารกิจ Bee-Bot Coding Online" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#e3faf6;color:#0d7a70">อื่นๆ</span>
+          <h3>10 ภารกิจ Bee-Bot Coding Online</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1m4s3ETzLxJYlPC1tgJsubrt1vcs8hR6w?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="other" style="--accent:#20b2a6">
+        <a class="cover" href="https://drive.google.com/drive/folders/1CSVn00NhhVSGpE7B_NyUs2Z90KkxdteV?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-20.webp" alt="เกมจำลองแผ่นดินไหว SEISMO-SIM พร้อมใบงาน" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#e3faf6;color:#0d7a70">อื่นๆ</span>
+          <h3>เกมจำลองแผ่นดินไหว SEISMO-SIM พร้อมใบงาน</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1CSVn00NhhVSGpE7B_NyUs2Z90KkxdteV?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="other" style="--accent:#20b2a6">
+        <a class="cover" href="https://drive.google.com/drive/folders/1ZOytCeQX4D1rxQQGjJUG4prXV0X4hE2q?usp=drive_link" target="_blank" rel="noopener"><img src="images/image-21.webp" alt="ชุดคู่มือและบัตรการเชื่อมต่อ MICRO:BIT BASIC" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#e3faf6;color:#0d7a70">อื่นๆ</span>
+          <h3>ชุดคู่มือและบัตรการเชื่อมต่อ MICRO:BIT BASIC</h3>
+          <a class="ctabtn" href="https://drive.google.com/drive/folders/1ZOytCeQX4D1rxQQGjJUG4prXV0X4hE2q?usp=drive_link" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      <article class="rcard" data-cat="other" style="--accent:#20b2a6">
+        <a class="cover" href="https://adeptive-exam-practice-system.netlify.app/" target="_blank" rel="noopener"><img src="images/image-22.webp" alt="ระบบห้องซ้อมข้อสอบ วิเคราะห์จุดอ่อนจุดแข็งด้วย AI" loading="lazy"><span class="hoverglow"></span></a>
+        <div class="rbody">
+          <span class="catchip" style="background:#e3faf6;color:#0d7a70">อื่นๆ</span>
+          <h3>ระบบห้องซ้อมข้อสอบ วิเคราะห์จุดอ่อนจุดแข็งด้วย AI</h3>
+          <a class="ctabtn" href="https://adeptive-exam-practice-system.netlify.app/" target="_blank" rel="noopener"><span>เปิดโฟลเดอร์ไฟล์</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+        </div>
+      </article>
+      </div>
+    </div>
+</main>
 
 <footer>
-  <img src="images/image-23.webp" alt="TEACHCODE">
-  <p>TEACHCODE — สื่อการสอนโค้ดดิ้งสำหรับครูไทย</p>
-  <p style="margin-top:4px">© 2026 TEACHCODE · ภาพทั้งหมดเป็นตัวอย่างสื่อภายในกลุ่ม VIP</p>
+  <div class="wrap"><b>TEACH CODE</b> · คลังสื่อการสอนโค้ดดิ้งสำหรับคุณครูและผู้ปกครอง</div>
 </footer>
 
-<div class="lb" id="lb">
-  <button class="x" id="lbx">✕</button><button class="p" id="lbp">‹</button><button class="n" id="lbn">›</button>
-  <figure><img id="lbi" src="" alt=""><h3 id="lbt"></h3><p id="lbd"></p></figure>
-</div>
-
 <script>
-const DATA = [{"src":"images/image-24.png","t":"สร้างมินิโปรเจกต์ Animation & Game ด้วยภาษาบล็อกและ Python","d":"สื่ออัปเดตล่าสุด: เรียนรู้การสร้าง Animation และ Game ผ่านเว็บด้วยภาษาบล็อกและ Python"},{"src":"images/image-25.webp","t":"จากภาษาบล็อกสู่ภาษาไพทอน ด้วย EduBlocks","d":"แนวทางการจัดการเรียนการสอน 6 บทเรียน ฉบับภาษาไทย พร้อมสไลด์และแผนการสอนครบถ้วน"},{"src":"images/image-26.webp","t":"10 การ์ดเขียนโค้ด Python 3 สำหรับผู้เริ่มต้น","d":"การ์ด 123 Coding Cards เทียบ Scratch · EduBlocks · Python ในใบเดียว"},{"src":"images/image-27.webp","t":"10 ภารกิจ Bee-Bot Coding Online","d":"ภารกิจหุ่นยนต์ Bee-Bot บนโปรแกรมจำลองออนไลน์ ฝึกอัลกอริทึมและการวางแผน"},{"src":"images/image-28.webp","t":"ชุดกิจกรรมสร้างสรรค์ด้วย ScratchJr","d":"กิจกรรมที่ 1–9 เรียนรู้การเขียนโปรแกรมผ่านกิจกรรมแสนสนุกสำหรับเด็กเล็ก"},{"src":"images/image-29.webp","t":"เกมจำลองแผ่นดินไหว SEISMO-SIM พร้อมใบงาน","d":"เรียนรู้ ทดลอง เข้าใจ ปลอดภัย ผ่านเกมจำลอง 3 สถานการณ์ พร้อมใบงานประกอบ"},{"src":"images/image-30.webp","t":"คู่มือการสร้างเกม FUEL UP ด้วย Scratch","d":"กิจกรรมการเรียนรู้การเลือกเติมน้ำมันอย่างคุ้มค่า ฝึกคำนวณ วางแผน และตัดสินใจ"},{"src":"images/image-31.webp","t":"Worksheet Coding Detective","d":"ใบงานฝึกคิดแบบนักสืบ เก็บเบาะแส วิเคราะห์ และสรุปผลอย่างเป็นระบบ"},{"src":"images/image-32.webp","t":"ใบงาน Coding ฝึกคิดเป็นขั้นตอน 17 ใบงาน","d":"ลากเส้นตามคำสั่งลูกศรจนครบทุกช่อง ได้ภาพน่ารัก ฝึกลำดับขั้นตอนและทิศทาง"},{"src":"images/image-33.webp","t":"ตามหาเส้นทางให้ถูกต้อง 11 ใบงาน","d":"ใบงานหาเส้นทางบนตาราง ฝึกคิดเชิงคำนวณและการแก้ปัญหาแบบเป็นขั้นตอน"},{"src":"images/image-34.webp","t":"นิทาน Coding กระจกวิเศษกับคำทำนายลับ","d":"นิทานพร้อม 5 ภารกิจ ผสานการอ่านกับการคิดเชิงตรรกะได้อย่างลงตัว"},{"src":"images/image-35.webp","t":"อันปลั๊กโค้ดดิ้ง 8 ใบงานฝึกกระบวนการคิด","d":"ใบงานลูกศรบนตาราง พัฒนาการคิดเชิงตรรกะ ทำได้ด้วยตนเอง ไม่ต้องใช้คอมพิวเตอร์"},{"src":"images/image-36.webp","t":"แบ่งปัน Unplug Coding ช่วยต้นกล้าทำภารกิจ","d":"ภารกิจ 5 วัน ใช้โครงการไทยช่วยไทย ฝึก Algorithm · If-Else · Debugging"},{"src":"images/image-37.png","t":"ฝึก Python เรื่อง Loop ผ่าน Pattern ดาว","d":"สื่อฝึกเขียน Python เรื่อง Loop ผ่าน Pattern ดาว พร้อมบัตรโจทย์และแผ่นเฉลย"},{"src":"images/image-38.webp","t":"ชุดคู่มือและบัตรการเชื่อมต่อ MICRO:BIT BASIC","d":"12 อุปกรณ์ 12 บัตรการ์ด พร้อมคู่มือประกอบแบบละเอียด เรียนรู้การต่อวงจรและเขียนโปรแกรมอย่างสนุก"},{"src":"images/image-39.webp","t":"เกมร้านค้าไทยช่วยไทย พลัส ฝึกคำนวณด้วย Scratch","d":"จำลองร้านค้า ฝึกทักษะคำนวณเงินและตรรกะผ่านเกม Scratch สนุกและใช้สอนได้จริง"},{"src":"images/image-40.webp","t":"คู่มือทำ Animation ระบบสุริยะ 10 Ep ด้วย Scratch","d":"สอนทำแอนิเมชันระบบสุริยะทีละขั้นตอน 10 ตอน เข้าใจง่าย เหมาะสำหรับฝึกสร้างแอนิเมชันด้วย Scratch"},{"src":"images/image-41.webp","t":"ระบบห้องซ้อมข้อสอบ วิเคราะห์จุดอ่อนจุดแข็งด้วย AI","d":"ฝึกทำข้อสอบเลือกวิชาและจำนวนข้อได้เอง พร้อมระบบวิเคราะห์จุดอ่อน รันข้อสอบเสริมจุดอ่อนให้อัตโนมัติด้วย AI และรายงานผลพร้อมกราฟ"},{"src":"images/image-42.png","t":"Scratch การเงินและการลงทุน","d":"กิจกรรมจำลองการซื้อ–ขายหุ้นและทองคำ ฝึกวางแผน ตัดสินใจ และเรียนรู้แนวคิดการเงินผ่านเกม Scratch"}];
-
-DATA.push({"src":"images/image-43.png","t":"การเขียนโปรแกรมสร้างโลก 3D ด้วย Flock XR","d":"4 โปรเจกต์การเขียนโปรแกรม สร้างโลก 3D ด้วย Block Coding"},{"src":"images/image-44.png","t":"Basic Micro:bit 14 กิจกรรม","d":"กิจกรรมพื้นฐานแบบง่าย ๆ พร้อมคู่มือและตัวอย่างการใช้งาน micro:bit"});
-const lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbt=document.getElementById('lbt'),lbd=document.getElementById('lbd');
-let cur=0;
-function show(i){cur=(i+DATA.length)%DATA.length;lbi.src=DATA[cur].src;lbt.textContent=DATA[cur].t;lbd.textContent=DATA[cur].d;lb.classList.add('on');}
-document.querySelectorAll('.card').forEach(c=>{
-  c.addEventListener('click',()=>show(+c.dataset.i));
-  c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(+c.dataset.i);}});
-});
-document.querySelectorAll('.galtab').forEach(btn=>{
+document.querySelectorAll('.rtab').forEach(btn=>{
   btn.addEventListener('click',()=>{
-    document.querySelectorAll('.galtab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.rtab').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
     const f=btn.dataset.filter;
-    document.querySelectorAll('.card').forEach(c=>{
-      c.classList.toggle('hide', f!=='all' && c.dataset.cat!==f);
+    document.querySelectorAll('.rgroup').forEach(g=>{
+      const gid = g.id.replace('grp-','');
+      g.classList.toggle('hide', f!=='all' && gid!==f);
     });
   });
 });
-document.getElementById('lbx').onclick=()=>lb.classList.remove('on');
-document.getElementById('lbp').onclick=e=>{e.stopPropagation();show(cur-1)};
-document.getElementById('lbn').onclick=e=>{e.stopPropagation();show(cur+1)};
-lb.addEventListener('click',e=>{if(e.target===lb||e.target.tagName==='FIGURE')lb.classList.remove('on')});
-document.addEventListener('keydown',e=>{
-  if(!lb.classList.contains('on'))return;
-  if(e.key==='Escape')lb.classList.remove('on');
-  if(e.key==='ArrowLeft')show(cur-1);
-  if(e.key==='ArrowRight')show(cur+1);
-});
 </script>
+
 </body>
 </html>
